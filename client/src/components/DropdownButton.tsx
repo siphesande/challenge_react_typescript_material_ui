@@ -80,7 +80,7 @@ export default function SplitButton({ drop_down_item }) {
                         selected={index === selectedIndex}
                         onClick={(event) => handleMenuItemClick(event, index)}
                       >
-                         {option}
+                         {option.join(":")}
                       </MenuItem>
                      
                     ))}
