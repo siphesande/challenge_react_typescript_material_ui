@@ -83,12 +83,14 @@ const UnionArray: React.FC = () => {
                           
                             <SplitButton
                               drop_down_item={Object.entries(row)}
-                              
-                            //drop_down_item={[row.name, row.a | row.b | row.c | row.d | row.e]}
+
                             />
+                            <div style={{height: "100px"}}></div>
+
                           
                         </TableCell>
 
+                        
                       </TableRow>
                     ))}
                   </TableBody>
