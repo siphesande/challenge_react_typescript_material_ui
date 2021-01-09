@@ -2,9 +2,6 @@
  const geo = require("./geo.json");
  const p3Data = require("./p3Data.json");
 
-
-
-
 // 1. Write a function that performs some validity checks on two JSON files,
 // geo.json​ and ​ data.json​ . The page must display whether or not the given
 // files/input are valid.
@@ -21,7 +18,7 @@ export const validityChecks = () => {
         return true;
     }
 }
-console.log(validityChecks());
+
 
 // 2. Write a function that takes in ​ latitude​ and ​ longitude​ as parameters, and
 // returns a sorted list of the 10 rows from data.json with the shortest distance
@@ -41,8 +38,6 @@ const combinedDataAndGeo = () => {
     return files_data;
 
 }
-//console.log( combinedDataAndGeo());
-
 
 //I calculate the euclidean distance so that I can get 10 rows from data.json with the shortest distance.
 const sortedByEuclideanDistance = (latitude1, longitude1) => {
@@ -62,7 +57,7 @@ const sortedByEuclideanDistance = (latitude1, longitude1) => {
         let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         let d = R * c; // Distance in km
         let data_object = { "euclidean_from_lat_long": d, ...data_from_data_json }
-        //console.log(data_object);
+        
         return data_object
     });
 
@@ -71,7 +66,7 @@ const sortedByEuclideanDistance = (latitude1, longitude1) => {
         if (a.euclidean_from_lat_long < b.euclidean_from_lat_long) return -1;
         return 0;
     });
-    //console.log(data_sorted_by_euclidean_distance);
+    
     return data_sorted_by_euclidean_distance
 }
 
@@ -83,8 +78,7 @@ const degreesToRadians = (deg) => {
 export const rowsWithShortestDistance = (latitude, longitude) => {
     let row_with_shortest_distance = sortedByEuclideanDistance(latitude, longitude)
     const tenRows = row_with_shortest_distance.filter((month, idx) => idx < 10)
-    //console.log(tenRows);
-
+    
     return tenRows  // row with shortest distance is the first item in sortedByEuclideanDistance
 }
 
@@ -133,7 +127,7 @@ export const unionOfTheTwoArrays = (testSet1, testSet2) => {
             final_array.push(elem);
         }
     });
-    //console.log(final_array)
+   
     return final_array
 
 }

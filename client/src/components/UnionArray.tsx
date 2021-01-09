@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { unionOfTheTwoArrays, unifiedArray } from '../tasks/task';
+import React, { useState } from 'react';
+import { unifiedArray } from '../tasks/task';
 import SplitButton from './DropdownButton';
 import Button from '@material-ui/core/Button'
 import LaunchIcon from '@material-ui/icons/Launch';
@@ -83,6 +83,7 @@ const UnionArray: React.FC = () => {
                           
                             <SplitButton
                               drop_down_item={Object.entries(row)}
+                              
                             //drop_down_item={[row.name, row.a | row.b | row.c | row.d | row.e]}
                             />
                           

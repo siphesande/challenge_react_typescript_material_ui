@@ -1,12 +1,9 @@
 import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button'
-import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,10 +28,6 @@ export default function DenseAppBar() {
       <AppBar position="static">
         <Toolbar variant="dense">
           
-          {/* <Typography variant="h6" className={classes.title}>
-          
-            <Link to="/"> Home</Link>
-          </Typography> */}
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
             <HomeIcon />
           </IconButton>

@@ -14,7 +14,7 @@ const ShortestDistance: React.FC = () => {
   const startsExecution = () => {
     setStart(true)
   }
-  //console.log(shortest_distance_array);
+ 
   return (
 
     <div>
