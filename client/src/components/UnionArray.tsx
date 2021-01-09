@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { unionOfTheTwoArrays, unifiedArray } from '../tasks/task';
-import SplitButton  from './DropdownButton';
+import SplitButton from './DropdownButton';
 import Button from '@material-ui/core/Button'
 import LaunchIcon from '@material-ui/icons/Launch';
 import Typography from '@material-ui/core/Typography';
@@ -69,20 +69,23 @@ const UnionArray: React.FC = () => {
                   <TableHead>
                     <TableRow>
                       <TableCell>Object Name</TableCell>
-                      <TableCell align="right">Button to open a drop-down</TableCell>
+                      <TableCell align="center">Button to open a drop-down</TableCell>
 
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {unifiedArray.map((row) => (
                       <TableRow key={row.name}>
-                        <TableCell component="th" scope="row">
+                        <TableCell size="medium" component="th" scope="row">
                           {row.name}
                         </TableCell>
-                        <TableCell align="right">
-                          <SplitButton 
-                            drop_down_item={row}
+                        <TableCell size="medium" align="right">
+                          
+                            <SplitButton
+                              drop_down_item={Object.entries(row)}
+                            //drop_down_item={[row.name, row.a | row.b | row.c | row.d | row.e]}
                             />
+                          
                         </TableCell>
 
                       </TableRow>

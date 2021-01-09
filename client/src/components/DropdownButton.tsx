@@ -13,7 +13,7 @@ import MenuList from '@material-ui/core/MenuList';
 
 
 export default function SplitButton({ drop_down_item }) {
-  const options = [...drop_down_item];
+  const options = drop_down_item;
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -45,12 +45,12 @@ export default function SplitButton({ drop_down_item }) {
 
   return (
     <Grid container direction="column" alignItems="center">
-      <Grid item xs={12}>
-        <ButtonGroup variant="contained" color="primary" ref={anchorRef} aria-label="split button">
+      <Grid item xs={6}>
+        <ButtonGroup variant="contained" size="medium" color="inherit" ref={anchorRef} aria-label="split button">
           <Button onClick={handleClick}>{options[selectedIndex]}</Button>
           <Button
-            color="primary"
-            size="small"
+            color="inherit"
+            size="medium"
             aria-controls={open ? 'split-button-menu' : undefined}
             aria-expanded={open ? 'true' : undefined}
             aria-label="select merge strategy"
@@ -68,8 +68,10 @@ export default function SplitButton({ drop_down_item }) {
                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
               }}
             >
-              <Paper>
+              
+              <Paper variant="outlined" elevation={3}>
                 <ClickAwayListener onClickAway={handleClose}>
+                
                   <MenuList id="split-button-menu">
                     {options.map((option, index) => (
                       <MenuItem
@@ -78,13 +80,22 @@ export default function SplitButton({ drop_down_item }) {
                         selected={index === selectedIndex}
                         onClick={(event) => handleMenuItemClick(event, index)}
                       >
-                        {option}
+                         {option}
                       </MenuItem>
+                     
                     ))}
+                   
+                     
                   </MenuList>
+                 
+                  
                 </ClickAwayListener>
+                
               </Paper>
+             
+                      
             </Grow>
+            
           )}
         </Popper>
       </Grid>

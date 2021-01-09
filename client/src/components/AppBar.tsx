@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button'
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -29,13 +30,14 @@ export default function DenseAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          
+          {/* <Typography variant="h6" className={classes.title}>
           
             <Link to="/"> Home</Link>
-          </Typography>
+          </Typography> */}
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
+            <HomeIcon />
+          </IconButton>
  
           <Button size="small" variant="outlined" color="inherit" href="/validitychecks">Validity Checks</Button>
           <Button size="small" variant="outlined" color="inherit" href="/shortestdistance">Shortest Distance</Button>
