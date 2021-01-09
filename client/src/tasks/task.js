@@ -1,6 +1,9 @@
-const data = require("./data.json");
-const geo = require("./geo.json");
-const p3Data = require("./p3Data.json");
+ const data = require("./data.json");
+ const geo = require("./geo.json");
+ const p3Data = require("./p3Data.json");
+
+
+
 
 // 1. Write a function that performs some validity checks on two JSON files,
 // geo.json​ and ​ data.json​ . The page must display whether or not the given
@@ -134,10 +137,16 @@ export const unionOfTheTwoArrays = (testSet1, testSet2) => {
     return final_array
 
 }
+export const unifiedArray = unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2)
+export { p3Data };
 
-unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2)
-combinedDataAndGeo()
+// console.log("task")
+// console.log(unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2))
+// console.log("task")
+//unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2)
+//combinedDataAndGeo()
 //sortedByEuclideanDistance(-34.270836, 18.459778);
-rowsWithShortestDistance(-34.270836, 18.459778)
+//rowsWithShortestDistance(-34.270836, 18.459778)
+
 
 

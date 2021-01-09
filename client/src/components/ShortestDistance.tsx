@@ -10,11 +10,11 @@ const ShortestDistance: React.FC = () => {
   const [start, setStart] = useState(false);
   const [shortest_distance_array, setShortest_distance_array] = useState(rowsWithShortestDistance(-34.270836, 18.459778));
 
-
+  
   const startsExecution = () => {
     setStart(true)
   }
-  console.log(shortest_distance_array);
+  //console.log(shortest_distance_array);
   return (
 
     <div>

@@ -37,9 +37,9 @@ export default function DenseAppBar() {
             <Link to="/"> Home</Link>
           </Typography>
  
-          <Button variant="outlined" color="inherit" href="/validitychecks">Validity Checks</Button>
-          <Button variant="outlined" color="inherit" href="/shortestdistance">Shortest Distance</Button>
-          <Button variant="outlined" color="inherit" href="/unionarray">Union Array</Button>
+          <Button size="small" variant="outlined" color="inherit" href="/validitychecks">Validity Checks</Button>
+          <Button size="small" variant="outlined" color="inherit" href="/shortestdistance">Shortest Distance</Button>
+          <Button size="small" variant="outlined" color="inherit" href="/unionarray">Union Array</Button>
 
         </Toolbar>
       </AppBar>
