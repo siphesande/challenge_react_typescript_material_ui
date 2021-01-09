@@ -14,9 +14,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <DenseAppBar />
-      <Typography variant="h6" color="inherit">
-        React TS/JS Interview Challenge
-      </Typography>
+      
       <div className="container">
         <Route exact path="/" component={Home} />
         <Route exact path="/validitychecks" component={ValidityChecks} />

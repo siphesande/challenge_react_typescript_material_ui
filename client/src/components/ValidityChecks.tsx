@@ -42,7 +42,7 @@ const ValidityChecks: React.FC = () => {
           : <Typography> NOTHING TO SHOW, PRESS START BUTTON</Typography>
         }
       </div>
-      <Typography>This is validity check page</Typography>
+      
     </div>
 
   );

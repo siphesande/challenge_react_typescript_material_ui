@@ -137,7 +137,7 @@ export const unionOfTheTwoArrays = (testSet1, testSet2) => {
 
 unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2)
 combinedDataAndGeo()
-sortedByEuclideanDistance(-34.270836, 18.459778);
+//sortedByEuclideanDistance(-34.270836, 18.459778);
 rowsWithShortestDistance(-34.270836, 18.459778)
 
 
