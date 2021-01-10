@@ -7,6 +7,8 @@
 
 ```
 # On the terminal
+git clone https://github.com/siphesande/challenge_react_typescript_material_ui.git
+cd challenge_react_typescript_material_ui
 cd client && npm install
 npm start 
   OR
