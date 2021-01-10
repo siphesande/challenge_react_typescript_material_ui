@@ -18,7 +18,7 @@ export default function SplitButton({ drop_down_item }) {
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   
-  console.log(drop_down_item)
+  //console.log(drop_down_item)
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);
   };

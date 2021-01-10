@@ -10,11 +10,11 @@ const ShortestDistance: React.FC = () => {
   const [start, setStart] = useState(false);
   const [shortest_distance_array, setShortest_distance_array] = useState(rowsWithShortestDistance(-34.270836, 18.459778));
 
-  
+
   const startsExecution = () => {
     setStart(true)
   }
- 
+
   return (
 
     <div>
@@ -45,8 +45,11 @@ const ShortestDistance: React.FC = () => {
                 shortest_distance_array.map((item, key) => (
 
                   <div key={key}>
-                    <Typography>{item.euclidean_from_lat_long} km</Typography>
-                    <Typography>{item.meta} </Typography>
+                    <Typography>Distance: {item.euclidean_from_lat_long} km</Typography>
+                    <Typography>Meta: {item.meta} </Typography>
+                    <Typography>Country code: {item.countrycode} </Typography>
+                    <Typography>asn: {item.asn} </Typography>
+                    <Typography>id: {item.id} </Typography>
 
                     <hr />
                   </div>
@@ -62,16 +65,10 @@ const ShortestDistance: React.FC = () => {
         }
       </div>
 
-
-
-
-
     </div>
 
   );
 };
-
-
 
 
 export default ShortestDistance;

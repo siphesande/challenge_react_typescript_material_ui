@@ -24,6 +24,8 @@ export const validityChecks = () => {
 // returns a sorted list of the 10 rows from data.json with the shortest distance
 // from the latitude and longitude, in a nicely formatted table.
 
+
+// We geo (latitude​ and ​ longitude) to data so that we can be able to calculate distance for every item
 const combinedDataAndGeo = () => {
     let files_data = [];
     data.forEach(item => {
@@ -132,7 +134,7 @@ export const unionOfTheTwoArrays = (testSet1, testSet2) => {
 
 }
 export const unifiedArray = unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2)
-export { p3Data };
+
 
 // console.log("task")
 // console.log(unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2))

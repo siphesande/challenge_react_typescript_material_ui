@@ -14,7 +14,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-//const p3Data = require("../tasks/p3Data.json");
+
 
 const useStyles = makeStyles({
   table: {
@@ -25,8 +25,7 @@ const useStyles = makeStyles({
 
 const UnionArray: React.FC = () => {
   const [start, setStart] = useState(false);
-  //const [combinationArray, setCombinationArray] = useState(unionOfTheTwoArrays(p3Data.testSet1, p3Data.testSet2));
-
+ 
   const classes = useStyles();
 
   const startsExecution = () => {
@@ -34,7 +33,6 @@ const UnionArray: React.FC = () => {
 
   }
 
-  //console.log(unifiedArray)
 
 
   return (
@@ -68,8 +66,8 @@ const UnionArray: React.FC = () => {
                 <Table className={classes.table} aria-label="simple table">
                   <TableHead>
                     <TableRow>
-                      <TableCell>Object Name</TableCell>
-                      <TableCell align="center">Button to open a drop-down</TableCell>
+                      <TableCell><Typography variant="h6">Object Name</Typography></TableCell>
+                      <TableCell align="center"><Typography variant="h6">Button to open a drop-down</Typography></TableCell>
 
                     </TableRow>
                   </TableHead>
