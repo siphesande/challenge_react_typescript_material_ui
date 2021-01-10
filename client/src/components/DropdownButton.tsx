@@ -12,17 +12,19 @@ import MenuList from '@material-ui/core/MenuList';
 
 
 
-export default function SplitButton({ drop_down_item }) {
-  const options = drop_down_item;
+interface SplitButtonProps {
+  drop_down_item: Array<any>,
+ }
+
+
+const SplitButton: React.SFC<SplitButtonProps> = (props) => {
+  
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const options = props.drop_down_item;
   
-  //console.log(drop_down_item)
-  const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`);
-  };
-
+  
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>,
     index: number,
@@ -47,7 +49,7 @@ export default function SplitButton({ drop_down_item }) {
     <Grid container direction="column" alignItems="center">
       <Grid item xs={6}>
         <ButtonGroup variant="contained" size="medium" color="inherit" ref={anchorRef} aria-label="split button">
-          <Button onClick={handleClick}>{options[selectedIndex]}</Button>
+          <Button>{options[selectedIndex]}</Button>
           <Button
             color="inherit"
             size="medium"
@@ -102,3 +104,5 @@ export default function SplitButton({ drop_down_item }) {
     </Grid>
   );
 }
+
+export default SplitButton;
